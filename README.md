@@ -20,6 +20,25 @@ being called after it:
     Watson (e.g. list of intents etc...). Powerful bots will probably make use of
     this in order to continually train watson for example.
 
+## Install
+
+```
+yarn add botmaster-watson-conversation-ware
+```
+
+or with npm
+
+```
+npm install --save botmaster-watson-conversation-ware
+```
+
+## Note
+
+This middleware can only be used in conjunction with botmaster-session-ware:
+https://github.com/botmasterai/botmaster-session-ware. As the context from
+botmaster needs to be persisted across different user messages.
+See how sessionWare is added at the end of the example using `useWrapped`.
+
 # API
 
 ## WatsonConversationWare
