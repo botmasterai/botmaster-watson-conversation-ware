@@ -49,18 +49,18 @@ const WatsonConversationWare require('botmaster-watson-conversation-ware);
 
 const botmaster = new Botmaster();
 botmaster.addBot(new SomeBotClass({
-id: 'botId',
-server: botmaster.server,
+  id: 'botId',
+  server: botmaster.server,
 }));
 
 const watsonConversationWareOptions = {
-settings: {
-username: <username_as_provided_by_bluemix>,
-password: <password_as_provided_by_bluemix>,
-version: 'v1', // as of this writing (01 Apr 2017), only v1 is available
-version_date: '2017-02-03', // latest version-date as of this writing
-},
-workspaceId: <the_workspace_id_to_communicate_with> // As provided by Watson Conversation
+  settings: {
+    username: <username_as_provided_by_bluemix>,
+    password: <password_as_provided_by_bluemix>,
+    version: 'v1', // as of this writing (01 Apr 2017), only v1 is available
+    version_date: '2017-02-03', // latest version-date as of this writing
+  },
+  workspaceId: <the_workspace_id_to_communicate_with> // As provided by Watson Conversation
 }
 
 // declaring middleware
@@ -68,17 +68,17 @@ const watsonConversationWare = WatsonConversationWare(watsonConversationWareOpti
 botmaster.use(watsonConversationWare);
 
 botmaster.use({
-type: 'incoming',
-name: 'my-awesome-middleware',
-controller: (bot, update) => {
-console.log(update.watsonUpdate);
-console.log(update.session.watsonContext);
-console.log(update.watson);
+  type: 'incoming',
+  name: 'my-awesome-middleware',
+  controller: (bot, update) => {
+    console.log(update.watsonUpdate);
+    console.log(update.session.watsonContext);
+    console.log(update.watson);
 
-// watsonUpdate.output.text is an array as watson can reply with a few
-// messages one after another
-return bot.sendTextCascadeTo(update.watsonUpdate.output.text, update,sender,id);
-}
+    // watsonUpdate.output.text is an array as watson can reply with a few
+    // messages one after another
+    return bot.sendTextCascadeTo(update.watsonUpdate.output.text, update,sender,id);
+  }
 })
 
 // This will make our context persist throughout different messages from the
