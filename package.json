@@ -1,0 +1,87 @@
+{
+  "name": "botmaster-watson-conversation",
+  "version": "1.0.0",
+  "description": "Botmaster middleware for Watson Conversation",
+  "main": "./dist/lib/index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test; nyc --reporter=lcov --reporter=html ava; nyc report",
+    "test-debug": "export NODE_ENV=test DEBUG=botmaster:*; nyc --reporter=lcov --reporter=html ava",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "postversion": "git push && git push --tags && rm -rf build/temp",
+    "docs": "documentation readme lib --section=\"API\"",
+    "report": "nyc report"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.js"
+    ],
+    "source": [],
+    "match": [],
+    "serial": true,
+    "verbose": true,
+    "failFast": false,
+    "tap": false,
+    "powerAssert": false,
+    "timeout": "4s"
+  },
+  "nyc": {
+    "check-coverage": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "tests"
+    ]
+  },
+  "keywords": [
+    "bot",
+    "botmaster",
+    "context",
+    "context-aware",
+    "watson",
+    "conversation",
+    "middleware",
+    "watson"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/botmasterai/botmaster-watson-conversation-ware"
+  },
+  "author": "JD Wuarin <john.dwuarin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/botmasterai/botmaster-watson-conversation-ware/issues"
+  },
+  "homepage": "https://github.com/botmasterai/botmaster-watson-conversation-ware#readme",
+  "engines": {
+    "node": ">=4.x.x"
+  },
+  "peerDependencies": {
+    "botmaster": "^3.0.7",
+    "botmaster-session-ware": "git+ssh://git@github.com:botmasterai/botmaster-session-ware#botmaster-v3",
+    "watson-developer-cloud": "^2.28.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "body-parser": "^1.17.1",
+    "botmaster": "^3.0.7",
+    "botmaster-session-ware": "git+ssh://git@github.com:botmasterai/botmaster-session-ware#botmaster-v3",
+    "botmaster-test-fixtures": "^2.1.0",
+    "coveralls": "^2.11.16",
+    "documentation": "^4.0.0-beta.18",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-ava": "^4.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "nock": "^9.0.11",
+    "nyc": "^10.1.2",
+    "request-promise": "^4.1.1",
+    "watson-developer-cloud": "^2.28.0"
+  },
+  "dependencies": {
+    "debug": "^2.6.3"
+  }
+}
