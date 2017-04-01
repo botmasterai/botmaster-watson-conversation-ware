@@ -1,8 +1,6 @@
 import test from 'ava';
 import request from 'request-promise';
-import { assign } from 'lodash';
-import { outgoingMessageFixtures,
-         incomingUpdateFixtures } from 'botmaster-test-fixtures';
+import { incomingUpdateFixtures } from 'botmaster-test-fixtures';
 import Botmaster from 'botmaster';
 import { MockBot } from 'botmaster/tests';
 import SessionWare from 'botmaster-session-ware';
