@@ -22,20 +22,16 @@ being called after it:
 
 ## Install
 
-```
-yarn add botmaster-watson-conversation-ware
-```
+    yarn add botmaster-watson-conversation-ware
 
 or with npm
 
-```
-npm install --save botmaster-watson-conversation-ware
-```
+    npm install --save botmaster-watson-conversation-ware
 
 ## Note
 
 This middleware can only be used in conjunction with botmaster-session-ware:
-https://github.com/botmasterai/botmaster-session-ware. As the context from
+<https://github.com/botmasterai/botmaster-session-ware>. As the context from
 botmaster needs to be persisted across different user messages.
 See how sessionWare is added at the end of the example using `useWrapped`.
 
@@ -58,14 +54,15 @@ that can be added by simply doing: `botmaster.use` (See example below)
 
 ```javascript
 const Botmaster = require('botmaster');
-const SomeBotClass = require('botmaster-socket.io'); // for the sake of the example
+// Using this socket.io bot class for the sake of the example
+const SocketioBot = require('botmaster-socket.io');
 // might want to use this in conjunction with your own store in production
 // as SessionWare uses the non-production ready MemoryStore by default
-const SessionWare require('botmaster-session-ware');
-const WatsonConversationWare require('botmaster-watson-conversation-ware);
+const SessionWare = require('botmaster-session-ware');
+const WatsonConversationWare = require('botmaster-watson-conversation-ware);
 
 const botmaster = new Botmaster();
-botmaster.addBot(new SomeBotClass({
+botmaster.addBot(new SocketioBot({
   id: 'botId',
   server: botmaster.server,
 }));
