@@ -91,7 +91,7 @@ botmaster.use({
 
     // watsonUpdate.output.text is an array as watson can reply with a few
     // messages one after another
-    return bot.sendTextCascadeTo(update.watsonUpdate.output.text, update,sender,id);
+    return bot.sendTextCascadeTo(update.watsonUpdate.output.text, update.sender.id);
   }
 })
 
