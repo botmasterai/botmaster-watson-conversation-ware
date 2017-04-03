@@ -2,7 +2,7 @@
   "name": "botmaster-watson-conversation-ware",
   "version": "1.0.0",
   "description": "Botmaster middleware for Watson Conversation",
-  "main": "./dist/lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "export NODE_ENV=test; nyc --reporter=lcov --reporter=html ava; nyc report",
     "test-debug": "export NODE_ENV=test DEBUG=botmaster:*; nyc --reporter=lcov --reporter=html ava",
