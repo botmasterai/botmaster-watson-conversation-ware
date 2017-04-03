@@ -258,8 +258,8 @@ async@^1.4.0:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
 async@^2.0.1:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.2.0.tgz#c324eba010a237e4fbd55a12dee86367d5c0ef32"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.3.0.tgz#1013d1051047dd320fe24e494d5c66ecaf6147d9"
   dependencies:
     lodash "^4.14.0"
 
@@ -1161,9 +1161,9 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-"botmaster-session-ware@git+https://git@github.com:botmasterai/botmaster-session-ware#botmaster-v3":
+botmaster-session-ware@^1.1.0:
   version "0.1.3"
-  resolved "git+https://git@github.com/botmasterai/botmaster-session-ware#d883963fa0f8e136de6ccb27745d2e9ddcacd58d"
+  resolved "https://registry.yarnpkg.com/botmaster-session-ware/-/botmaster-session-ware-0.1.3.tgz#69d16ec1295ccda43c710632061464b24663902e"
   dependencies:
     debug "^2.6.0"
     ramda "^0.23.0"
@@ -1172,9 +1172,9 @@ botmaster-test-fixtures@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/botmaster-test-fixtures/-/botmaster-test-fixtures-2.1.0.tgz#f368006a6ad3bb9bda02477486f0840d5ceb6518"
 
-botmaster@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/botmaster/-/botmaster-3.0.7.tgz#5caf54ed267c69f42f44816a980bc870e81637ca"
+botmaster@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/botmaster/-/botmaster-3.0.8.tgz#d9dd2c33f3e6fbdf535ef8b36cc65dd815421c2f"
   dependencies:
     debug "^2.6.1"
     lodash "^4.17.4"
@@ -2151,6 +2151,10 @@ espree@^3.1.3, espree@^3.4.0:
 esprima@^2.6.0:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
+
+esprima@^3.1.1:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
 
 espurify@^1.5.0, espurify@^1.6.0:
   version "1.7.0"
@@ -3331,12 +3335,19 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@3.6.1, js-yaml@^3.3.1, js-yaml@^3.5.1:
+js-yaml@3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
     argparse "^1.0.7"
     esprima "^2.6.0"
+
+js-yaml@^3.3.1, js-yaml@^3.5.1:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.2.tgz#02d3e2c0f6beab20248d412c352203827d786721"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^3.1.1"
 
 jsbn@~0.1.0:
   version "0.1.1"
@@ -5315,8 +5326,8 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 uglify-js@^2.6:
-  version "2.8.20"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.20.tgz#be87100fbc18de3876ed606e9d24b4568311cecf"
+  version "2.8.21"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.21.tgz#1733f669ae6f82fc90c7b25ec0f5c783ee375314"
   dependencies:
     source-map "~0.5.1"
     yargs "~3.10.0"
