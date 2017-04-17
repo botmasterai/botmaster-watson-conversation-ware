@@ -1,6 +1,6 @@
 {
   "name": "botmaster-watson-conversation-ware",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Botmaster middleware for Watson Conversation",
   "main": "./lib/index.js",
   "scripts": {
