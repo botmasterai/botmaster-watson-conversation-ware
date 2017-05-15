@@ -87,7 +87,7 @@ botmaster.use({
   controller: (bot, update) => {
     console.log(update.watsonUpdate);
     console.log(update.session.watsonContext);
-    console.log(update.watson);
+    console.log(update.watsonConversation);
 
     // watsonUpdate.output.text is an array as watson can reply with a few
     // messages one after another
@@ -97,7 +97,7 @@ botmaster.use({
 
 // This will make our context persist throughout different messages from the
 // same user
-const sessionWare = SessionWare();
+const sessionWare = new SessionWare();
 botmaster.useWrapped(sessionWare.incoming, sessionWare.outgoing);
 ```
 
