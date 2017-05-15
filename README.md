@@ -97,8 +97,8 @@ botmaster.use({
 
 // This will make our context persist throughout different messages from the
 // same user
-const { incomingSessionWare, outgoingSessionWare } = SessionWare();
-botmaster.useWrapped(incomingSessionWare, outgoingSessionWare);
+const sessionWare = SessionWare();
+botmaster.useWrapped(sessionWare.incoming, sessionWare.outgoing);
 ```
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** valid botmaster 3.0 incoming middleware object
